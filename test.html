@@ -1,0 +1,29 @@
+<input id='demo_input' size='100'/>
+<script>
+	var demo_input = document.getElementById('demo_input');
+	
+	var type_this = "Baloo is a cute dog!";
+	var index = 0;
+	var deleteIndex = type_this.length;
+	
+	
+	
+	window.next_letter = function() {
+	    if (index <= type_this.length) {
+	        demo_input.value = type_this.substr(0, index++);
+	        setTimeout("next_letter()", 50);
+	    }
+	    else if(index > type_this.length) {
+
+	    	demo_input.value = type_this.substr(0, deleteIndex--);
+	    	setTimeout("next_letter()", 50);
+	    	if(deleteIndex == 0){
+	    		index = 0;
+	    		deleteIndex = type_this.length;
+	    	}           
+
+	    }
+	}
+	
+	next_letter();
+</script>
