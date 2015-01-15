@@ -1,0 +1,1 @@
+Writing by yourself is hard, why not let everyone help?
